@@ -1,0 +1,41 @@
+html,
+body {
+  height: 100%;
+  background-color: #333;
+}
+
+body {
+  color: #000;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+}
+.btn {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  background: rgba(0,0,0,0);
+  color: #fff;
+}
+.btn:hover {
+  color: #fff;
+  background: #000;
+  transform: scale(1.1);
+}
+.page {
+  height: 100%;
+  width: 100%;
+}
+#content1 {
+  /*background: #333 url('https://pbs.twimg.com/profile_images/556488484781694976/pLNGBiS4.png') no-repeat center center fixed;*/
+}
+#content2 {
+  background: #444;
+}
+#content3 {
+  background: #555;
+}
+#content4 {
+  background: #666;
+  text-align: left;
+}
+#footer {
+  height: 30px;
+}
