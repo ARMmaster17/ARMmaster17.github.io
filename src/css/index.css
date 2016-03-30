@@ -35,7 +35,8 @@ body {
 #content4 {
   background: #666;
   text-align: left;
+  height: 95%;
 }
 #footer {
-  height: 30px;
+  height: 5%;
 }
