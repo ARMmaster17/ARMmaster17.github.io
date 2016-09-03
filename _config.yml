@@ -1,0 +1,20 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Joshua Zenn
+email: wordman05@gmail.com
+description: >
+  I'm a programmer, hardware engineer, writer, martial artist, and a student. I'm also a life long learner being educated by some of the best in the field in online courses from MIT OCW, edX, and Udacity.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://armmaster17.github.io" # the base hostname & protocol for your site
+twitter_username: jzenn
+github_username:  ARMmaster17
+timezone: America/New_York
+
+# Build settings
+markdown: kramdown
