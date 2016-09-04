@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Joshua Zenn</title>
-    <description>I&#39;m a programmer, hardware engineer, writer, martial artist, and a student. I&#39;m also a life long learner being educated by some of the best in the field in online courses from MIT OCW, edX, and Udacity.
-</description>
+    <description>The ravings of a mad man, with a little bit of technology and science.</description>
     <link>http://armmaster17.github.io/</link>
     <atom:link href="http://armmaster17.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 03 Sep 2016 21:29:01 -0400</pubDate>
-    <lastBuildDate>Sat, 03 Sep 2016 21:29:01 -0400</lastBuildDate>
+    <pubDate>Sat, 03 Sep 2016 21:48:28 -0400</pubDate>
+    <lastBuildDate>Sat, 03 Sep 2016 21:48:28 -0400</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
