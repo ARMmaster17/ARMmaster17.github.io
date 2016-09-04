@@ -34,6 +34,12 @@ Website for local neighborhood, powered by Sinatra on top of Ruby.
 
 The new Meetups.com, supercharged with psychology and machine learning.
 
+# Spooks Manor
+
+*NDA-sealed VCS repository* - **C#** - **Unity/MonoGame**
+
+2D sidescroller set in fantasy world.
+
 ---
 
 For the full list of projects I've worked on, see my GitHub portfolio: {% include icon-github.html username="ARMmaster17" %}
