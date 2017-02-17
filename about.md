@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-I'm a programmer, hardware engineer, writer, martial artist, and a student. I'm also a life long learner being educated by some of the best in the field in online courses from MIT OCW, edX, and Udacity.
+I'm a self taught programmer specializing in web development and artificial intelligence. When I'm not coding, I enjoy playing Space Engineers, reading books, and woodworking. I am currently taking time off of school with plans to return in 2019.
