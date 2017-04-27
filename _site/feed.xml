@@ -5,8 +5,8 @@
     <description>Technology, science, music, gaming, and sometimes crudely drawn art.</description>
     <link>https://armmaster17.github.io/</link>
     <atom:link href="https://armmaster17.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 25 Apr 2017 22:01:26 -0400</pubDate>
-    <lastBuildDate>Tue, 25 Apr 2017 22:01:26 -0400</lastBuildDate>
+    <pubDate>Wed, 26 Apr 2017 22:21:08 -0400</pubDate>
+    <lastBuildDate>Wed, 26 Apr 2017 22:21:08 -0400</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -17,9 +17,97 @@
 
 &lt;p&gt;Then I found &lt;a href=&quot;http://discoproject.org&quot;&gt;Disco&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Unlike Hadoop, Disco has libraries for use in Python, which I find slightly more acceptable than Java. It also has an extrememly small footprint. I was able to run a testing worker with 256mb of RAM, 1 CPU, and 1 GB of hard drive space (including all of its dependencies).&lt;/p&gt;
+&lt;p&gt;Unlike Hadoop, Disco has libraries for use in Python, which I find slightly more acceptable than Java. It also has an extremely small footprint. I was able to run a testing worker with 256mb of RAM, 1 CPU, and 1 GB of hard drive space (including all of its dependencies).&lt;/p&gt;
 
-&lt;p&gt;The one remaining problem, is that following the installation instructions for Disco has probably been one of the most frustrating pieces of software I’ve ever had to install.&lt;/p&gt;
+&lt;p&gt;The one remaining problem, is that following the installation instructions for Disco has probably been one of the most frustrating pieces of software I’ve ever had to install. You know you’ve spent too much time trying when you’re reading a 5 year old GitHub issue, tracking down an Erlang issue related to a cross-language pipe library, all just by following the “Getting Started” guide. Of course, &lt;a href=&quot;https://xkcd.com/1742/&quot;&gt;there’s an XKCD for that&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This guide is written as a fool-proof guide for anyone else who wants to get up and running with Disco with minimal hassle.&lt;/p&gt;
+
+&lt;h2 id=&quot;prerequisites&quot;&gt;1. Prerequisites&lt;/h2&gt;
+&lt;p&gt;There are several ways of accomplishing this. I personally used my Proxmox cluster split out over 6 different machines, all behind a private subnet with a firewall. You can do whatever as long as you meet the following requirements.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;At least one machine (preferably more, dedicated boxes like docker containers or VMs)&lt;/li&gt;
+  &lt;li&gt;CentOS 7 (anything else and you are on your own)&lt;/li&gt;
+  &lt;li&gt;Ansible server (preferred, as I have playbooks in a Gist link below, but this is not required)&lt;/li&gt;
+  &lt;li&gt;A configurable DNS server in your network (if you think you can cheat with the HOSTS file, you are in for a world of hurt)&lt;/li&gt;
+  &lt;li&gt;A free afternoon (Seriously, this could take a while)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;hello-bash-my-old-friend&quot;&gt;2. Hello bash my old friend&lt;/h2&gt;
+&lt;p&gt;Go ahead and turn your machines on or provision your VMs. You can do one, or two, (or twenty, as I did). Make sure all of them are running CentOS 7. The minimum specs I got away with was 1 CPU, 512mb of RAM, and 1GB of hard drive space. If you are creating multiple “workers”, each one only needs 256mb of RAM. 512mb is only needed for the “master” node. Of course, if you intend on running bigger datasets than me, you will need to increase this number.&lt;/p&gt;
+
+&lt;p&gt;For each box you create, you will need to create a corresponding entry on your DNS server. How to do this is beyond the scope of this article and depends on what software you choose to use for this. I was able to just add the entries to my pfSense router using the configuration page. If your router can’t do this, take a look at a BIND server.&lt;/p&gt;
+
+&lt;p&gt;Now boot all of the boxes and run the following command.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;yum install openssh-server openssh-client openssl-devel -y
+&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;ssh-keygen -N &lt;span class=&quot;s1&quot;&gt;&#39;&#39;&lt;/span&gt; -f ~/.ssh/id_dsa
+&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;service sshd restart&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This sets everything up for SSH connections between the master node and the workers (This step is also required if you wish to use Ansible, as described below).&lt;/p&gt;
+
+&lt;h2 id=&quot;installing-erlang-on-the-first-try-sometimes&quot;&gt;3. Installing Erlang on the first try (sometimes)&lt;/h2&gt;
+
+&lt;p&gt;Now we have to install Erlang. This is a pain to set up on CentOS for some reason. All the tutorials I found were either 5 years old or not for my distro. The solution I found was Kerl. Type the following commands into the terminals on all the machines.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;curl -O https://raw.githubusercontent.com/kerl/kerl/master/kerl
+&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;chmod a+x kerl&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This gets Kerl all set up so we can install Erlang. Before we clone and build Erlang though, we need to install some additional dependencies.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;yum install tar gcc make perl ncurses-devel git -y&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now we can install Kerl. Run the following commands.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;./kerl build 17.5 17.5
+&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;./kerl install 17.5 erlang/17_5/
+&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;. /root/erlang/17_5/activate
+&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;erl -version&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;If that works without any errors, you are now good to go. Now we can install Disco.&lt;/p&gt;
+
+&lt;h2 id=&quot;time-for-the-actual-installation&quot;&gt;4. Time for the (actual) installation&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;git clone git://github.com/discoproject/disco.git
+&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;disco&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;At this point, what you need to do next depends on the type of installation you are performing. If you are installing the master node (or doing a single-machine install), run this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;make install&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Otherwise, if you are creating a worker node that doesn’t need the web GUI, run this instead:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;make install-node&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now, on both the master and worker nodes, set up the python libraries.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;lib
+&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;python setup.py install --user
+&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ..&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;developing-trust-in-your-cluster-using-math-and-crypto-stuff&quot;&gt;5. Developing trust in your cluster (using math and crypto-stuff)&lt;/h2&gt;
+
+&lt;p&gt;The last part is to set up the Erlang cookie and SSH keys. On the master server, run the disco service and stop it by running the following.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;bin/disco start
+// Wait a few seconds...
+&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;bin/disco stop&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now run the following on your master node. Replace NODE with the DNS-resolvable name of each of your worker boxes.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;ssh-copy-id localhost
+&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;scp ~/.erlang.cookie localhost:
+// Now run these two commands &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;every worker box you have,
+// replacing NODE with the DNS resolvable name.
+&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;ssh-copy-id NODE
+&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;scp ~/.erlang.cookie NODE:&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Finally, run the following on all the nodes:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;bin/disco nodaemon&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;At this point, you should be able to follow the instructions in the documentation on &lt;a href=&quot;http://disco.readthedocs.io/en/develop/start/install.html#add-nodes-to-disco&quot;&gt;adding all of your nodes to the web GUI&lt;/a&gt; and running the &lt;a href=&quot;http://disco.readthedocs.io/en/develop/start/install.html#test-the-system&quot;&gt;test wordcount program&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Fri, 17 Feb 2017 13:00:17 -0500</pubDate>
         <link>https://armmaster17.github.io/2017/02/17/getting-started-with-disco-mapreduce/</link>
