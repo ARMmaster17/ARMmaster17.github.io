@@ -13,3 +13,6 @@ markdown: kramdown
 
 # Permalink settings
 permalink: /:year/:month/:day/:title/
+
+# Hide future posts
+future: false

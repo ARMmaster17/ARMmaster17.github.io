@@ -14,17 +14,11 @@
 
       <div class="footer-col footer-col-2">
         <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
+          <li>{% include icon.html username=site.github_username icon='github' url='https://github.com/' %}</li>
+          <li>{% include icon.html username='~ARMmaster17' icon='gratipay' url='https://gratipay.com/' %}</li>
+          <li>{% include icon.html username='jzenn' icon='linkedin' url='https://linkedin.com/in/' %}</li>
+          <li>{% include icon.html username='ARMmaster17' icon='steam' url='https://steamcommunity.com/id/' %}</li>
+          <li>{% include icon.html username=site.twitter_username icon='twitter' url='https://twitter.com/' %}</li>
         </ul>
       </div>
 

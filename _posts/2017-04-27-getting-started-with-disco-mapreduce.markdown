@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Getting Started With Disco MapReduce"
-date:   2017-04-27 13:00:17 -0500
+date:   2017-04-27 12:00:00 -0500
 categories: disco tutorial
 ---
 A while back, I wanted to learn how to use Hadoop. I prefer to self-host my stuff as it's free (as in pizza), and free (as in speech).
@@ -37,7 +37,7 @@ $ ssh-keygen -N '' -f ~/.ssh/id_dsa
 $ service sshd restart
 {% endhighlight %}
 
-This sets everything up for SSH connections between the master node and the workers (This step is also required if you wish to use Ansible, as described below).
+This sets everything up for SSH connections between the master node and the workers.
 
 ## 3. Installing Erlang on the first try (sometimes)
 

@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "TODO: Title"
+date:   2017-04-27 12:00:00 -0500
+categories: foo bar
+---
+
+TODO: post content

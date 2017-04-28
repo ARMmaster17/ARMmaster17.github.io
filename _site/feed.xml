@@ -5,8 +5,8 @@
     <description>Technology, science, music, gaming, and sometimes crudely drawn art.</description>
     <link>https://armmaster17.github.io/</link>
     <atom:link href="https://armmaster17.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 27 Apr 2017 19:46:56 -0400</pubDate>
-    <lastBuildDate>Thu, 27 Apr 2017 19:46:56 -0400</lastBuildDate>
+    <pubDate>Thu, 27 Apr 2017 22:03:05 -0400</pubDate>
+    <lastBuildDate>Thu, 27 Apr 2017 22:03:05 -0400</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -44,7 +44,7 @@
 &lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;ssh-keygen -N &lt;span class=&quot;s1&quot;&gt;&#39;&#39;&lt;/span&gt; -f ~/.ssh/id_dsa
 &lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;service sshd restart&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;This sets everything up for SSH connections between the master node and the workers (This step is also required if you wish to use Ansible, as described below).&lt;/p&gt;
+&lt;p&gt;This sets everything up for SSH connections between the master node and the workers.&lt;/p&gt;
 
 &lt;h2 id=&quot;installing-erlang-on-the-first-try-sometimes&quot;&gt;3. Installing Erlang on the first try (sometimes)&lt;/h2&gt;
 
@@ -108,7 +108,7 @@
 
 &lt;p&gt;At this point, you should be able to follow the instructions in the documentation on &lt;a href=&quot;http://disco.readthedocs.io/en/develop/start/install.html#add-nodes-to-disco&quot;&gt;adding all of your nodes to the web GUI&lt;/a&gt; and running the &lt;a href=&quot;http://disco.readthedocs.io/en/develop/start/install.html#test-the-system&quot;&gt;test wordcount program&lt;/a&gt;.&lt;/p&gt;
 </description>
-        <pubDate>Thu, 27 Apr 2017 14:00:17 -0400</pubDate>
+        <pubDate>Thu, 27 Apr 2017 13:00:00 -0400</pubDate>
         <link>https://armmaster17.github.io/2017/04/27/getting-started-with-disco-mapreduce/</link>
         <guid isPermaLink="true">https://armmaster17.github.io/2017/04/27/getting-started-with-disco-mapreduce/</guid>
         
@@ -116,6 +116,21 @@
         <category>disco</category>
         
         <category>tutorial</category>
+        
+      </item>
+    
+      <item>
+        <title>TODO: Title</title>
+        <description>&lt;p&gt;TODO: post content&lt;/p&gt;
+</description>
+        <pubDate>Thu, 27 Apr 2017 13:00:00 -0400</pubDate>
+        <link>https://armmaster17.github.io/2017/04/27/unnamed/</link>
+        <guid isPermaLink="true">https://armmaster17.github.io/2017/04/27/unnamed/</guid>
+        
+        
+        <category>foo</category>
+        
+        <category>bar</category>
         
       </item>
     
