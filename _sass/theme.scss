@@ -1,4 +1,43 @@
 body {
   font: 100% Helvetica, sans-serif;
-  color: #333;
+  background-color: #333;
+}
+
+.ins-wrapper, .site-header, .site-footer {
+  background-color: #FFE;
+}
+
+.ins-wrapper {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.site-footer {
+  border-top: 0px;
+  margin-top: 30px;
+  max-width: -webkit-calc(800px - (30px * 2));
+  max-width: calc(800px - (30px * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 0px;
+  margin-bottom: 30px;
+}
+
+.footer-col-2 {
+  margin-bottom: 10px;
+}
+
+.site-header {
+  border-bottom: 0px;
+}
+
+.page-content {
+  padding-bottom: 0px;
+}
+
+.ins-wrapper, .site-footer {
+  border-radius: 25px;
+  box-shadow: 10px 10px 5px black;
 }

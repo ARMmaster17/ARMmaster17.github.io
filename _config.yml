@@ -16,3 +16,6 @@ permalink: /:year/:month/:day/:title/
 
 # Hide future posts
 future: false
+
+# Explicitly specify theme file to make Jekyll happy
+theme: theme

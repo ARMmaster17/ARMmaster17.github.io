@@ -1,8 +1,30 @@
 ---
 layout: post
-title:  "TODO: Title"
+title:  "TODO: title"
 date:   2017-04-27 12:00:00 -0500
-categories: foo bar
+categories: videogames school education
 ---
 
-TODO: post content
+About seven years ago, author Jane McGonigal gave a TED talk, stressing a peculiar point that we "need to be playing more video games".[^1] **TODO: Rest of intro**
+
+For a long time, I was your typical gamer. I liked most of the popular video game titles out there such as Battlefield, Minecraft, Prison Architect, and everything in between. About two years ago, I stumbled across a game called Kerbal Space Program. It looked interesting enough, build a rocket, go to the moon, and try to not blow up. It seemed simple enough, but within my first hour of playing the game, that statement couldn't be farther from the truth. Almost all of my first few missions ended up something [like this](https://www.youtube.com/watch?v=UKUz5ZUPqM8). As I would do with any other game where I hit a dead-end with my current knowledge, I turned to the Internet for help. I found wiki pages and videos explaining concepts of the game. The more I learned, the more complex rockets I was able to build, which led to more numerous and difficult problems. Eventually, I started to cross a line where in-game "key sequences" suddenly turned into complex formulas and simulations using NASA's GMAT tool. My reading list slowly started to get replaced with various math and aerospace engineering books. My free time between my classes was spent toying with formulas for a perfect Hohmann maneuver on my next mission. All of this, just from playing one game. It didn't stop there though.
+
+A few months ago, I was randomly clicking through Reddit until I came across the [r/hoggit](reddit.com/r/hoggit) subreddit. I had spent some time fooling around back in the day with Microsoft Flight Simulator 98 and 2000, but wasn't really interested by it. The sub itself revolved around several different sims, but mainly stood behind DCS: World. Flipping through the Steam page, it was a military combat flight sim. It used highly accurate simulations combined with highly detailed aircraft to make it more or less the most advanced flight sim you're going to get on a home PC. It was free, and my PC could handle it, so I figured I would give it a try. Launching the sim for the first time threw me straight into the cockpit of a Russian SU-25T. My first couple of free flights (i.e. no enemies), ended in giant balls of fire. My first few firefights involved me flying into a panic and performing pointless barrel rolls at the slightest hint of a radar lock from enemy aircraft. Over time, however, I got better at it. After about a week, I was able to land without making a crater. After about four weeks (and buying an actual air superiority fighter, the Russian SU-27) I was able to calmly zip around in combat, mowing down AI aircraft left and right. Over time though, I started looking into how real world pilots fly their planes. I learned what all that in game radio chatter actually meant. I learned what vectors are and how to navigate using them. I even learned what happens when you [punch out above mach 1](https://www.youtube.com/watch?v=xsp0kGrwXW4) (basically death). **TODO: Finish anecdote-DCS**
+
+**TODO: Find external link between gaming and learning opportunities.**
+
+**TODO: Tie in to education system reform.**
+
+**TODO: Message to educators**
+
+**TODO: Message to parents**
+
+**TODO: Message to students**
+
+**TODO: Message to video game developers**
+
+**TODO: Warning of evil (games are both good and evil)**
+
+## Sources
+
+[^1]: [https://www.youtube.com/watch?v=dE1DuBesGYM](https://www.youtube.com/watch?v=dE1DuBesGYM)
