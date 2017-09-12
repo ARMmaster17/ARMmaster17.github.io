@@ -18,4 +18,4 @@ permalink: /:year/:month/:day/:title/
 future: false
 
 # Explicitly specify theme file to make Jekyll happy
-theme: theme
+#theme: theme

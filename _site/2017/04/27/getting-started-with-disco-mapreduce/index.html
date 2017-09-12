@@ -10,8 +10,8 @@
   <meta name="description" content="A while back, I wanted to learn how to use Hadoop. I prefer to self-host my stuff as it’s free (as in pizza), and free (as in speech).">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="https://armmaster17.github.io/2017/04/27/getting-started-with-disco-mapreduce/">
-  <link rel="alternate" type="application/rss+xml" title="Joshua Zenn" href="https://armmaster17.github.io/feed.xml">
+  <link rel="canonical" href="http://0.0.0.0:8080/2017/04/27/getting-started-with-disco-mapreduce/">
+  <link rel="alternate" type="application/rss+xml" title="Joshua Zenn" href="http://0.0.0.0:8080/feed.xml">
   
   <script src="https://use.fontawesome.com/de448e9030.js"></script>
 
@@ -96,7 +96,7 @@
 
 <p>This guide is written as a fool-proof guide for anyone else who wants to get up and running with Disco with minimal hassle.</p>
 
-<h2 id="prerequisites">1. Prerequisites</h2>
+<h2 id="1-prerequisites">1. Prerequisites</h2>
 <p>There are several ways of accomplishing this. I personally used my Proxmox cluster split out over 6 different machines, all behind a private subnet with a firewall. You can do whatever as long as you meet the following requirements.</p>
 
 <ul>
@@ -106,7 +106,7 @@
   <li>A free afternoon (Seriously, this could take a while)</li>
 </ul>
 
-<h2 id="hello-bash-my-old-friend">2. Hello bash my old friend</h2>
+<h2 id="2-hello-bash-my-old-friend">2. Hello bash my old friend</h2>
 <p>Go ahead and turn your machines on or provision your VMs. You can do one, or two, (or twenty, as I did). Make sure all of them are running CentOS 7. The minimum specs I got away with was 1 CPU, 512mb of RAM, and 1GB of hard drive space. If you are creating multiple “workers”, each one only needs 256mb of RAM. 512mb is only needed for the “master” node. Of course, if you intend on running bigger datasets than me, you will need to increase this number.</p>
 
 <p>For each box you create, you will need to create a corresponding entry on your DNS server. How to do this is beyond the scope of this article and depends on what software you choose to use for this. I was able to just add the entries to my pfSense router using the configuration page. If your router can’t do this, take a look at a BIND server.</p>
@@ -119,7 +119,7 @@
 
 <p>This sets everything up for SSH connections between the master node and the workers.</p>
 
-<h2 id="installing-erlang-on-the-first-try-sometimes">3. Installing Erlang on the first try (sometimes)</h2>
+<h2 id="3-installing-erlang-on-the-first-try-sometimes">3. Installing Erlang on the first try (sometimes)</h2>
 
 <p>Now we have to install Erlang. This is a pain to set up on CentOS for some reason. All the tutorials I found were either 5 years old or not for my distro. The solution I found was Kerl. Type the following commands into the terminals on all the machines.</p>
 
@@ -139,7 +139,7 @@
 
 <p>If that works without any errors, you are now good to go. Now we can install Disco.</p>
 
-<h2 id="time-for-the-actual-installation">4. Time for the (actual) installation</h2>
+<h2 id="4-time-for-the-actual-installation">4. Time for the (actual) installation</h2>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>git clone git://github.com/discoproject/disco.git
 <span class="gp">$ </span><span class="nb">cd </span>disco</code></pre></figure>
@@ -158,7 +158,7 @@
 <span class="gp">$ </span>python setup.py install --user
 <span class="gp">$ </span><span class="nb">cd</span> ..</code></pre></figure>
 
-<h2 id="developing-trust-in-your-cluster-using-math-and-crypto-stuff">5. Developing trust in your cluster (using math and crypto-stuff)</h2>
+<h2 id="5-developing-trust-in-your-cluster-using-math-and-crypto-stuff">5. Developing trust in your cluster (using math and crypto-stuff)</h2>
 
 <p>The last part is to set up the Erlang cookie and SSH keys. On the master server, run the disco service and stop it by running the following.</p>
 

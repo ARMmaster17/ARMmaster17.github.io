@@ -3,11 +3,47 @@
   <channel>
     <title>Joshua Zenn</title>
     <description>Technology, science, music, gaming, and sometimes crudely drawn art.</description>
-    <link>https://armmaster17.github.io/</link>
-    <atom:link href="https://armmaster17.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 06 May 2017 22:34:49 -0400</pubDate>
-    <lastBuildDate>Sat, 06 May 2017 22:34:49 -0400</lastBuildDate>
-    <generator>Jekyll v3.0.1</generator>
+    <link>http://0.0.0.0:8080/</link>
+    <atom:link href="http://0.0.0.0:8080/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 11 Sep 2017 22:13:52 -0400</pubDate>
+    <lastBuildDate>Mon, 11 Sep 2017 22:13:52 -0400</lastBuildDate>
+    <generator>Jekyll v3.5.1</generator>
+    
+      <item>
+        <title>Digging: Why Some People Can Program and Others Can't</title>
+        <description>&lt;p&gt;About seven years ago, author Jane McGonigal gave a TED talk, stressing a peculiar point that we need to be playing more video games.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;strong&gt;TODO: Rest of intro&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;30 Billion hours is not enough to solve the world’s problems.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Jane McGonigal, 20xx, TedX&lt;sup id=&quot;fnref:1:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;bold&lt;/strong&gt;&lt;sup id=&quot;fnref:1:2&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;sources&quot;&gt;Sources&lt;/h2&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Empty source&amp;nbsp;&lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&amp;nbsp;&lt;a href=&quot;#fnref:1:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&amp;nbsp;&lt;a href=&quot;#fnref:1:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Mon, 11 Sep 2017 13:00:00 -0400</pubDate>
+        <link>http://0.0.0.0:8080/2017/09/11/problem-solving/</link>
+        <guid isPermaLink="true">http://0.0.0.0:8080/2017/09/11/problem-solving/</guid>
+        
+        
+        <category>programming</category>
+        
+        <category>aptitude</category>
+        
+        <category>learning</category>
+        
+      </item>
     
       <item>
         <title>Getting Started With Disco MapReduce</title>
@@ -23,7 +59,7 @@
 
 &lt;p&gt;This guide is written as a fool-proof guide for anyone else who wants to get up and running with Disco with minimal hassle.&lt;/p&gt;
 
-&lt;h2 id=&quot;prerequisites&quot;&gt;1. Prerequisites&lt;/h2&gt;
+&lt;h2 id=&quot;1-prerequisites&quot;&gt;1. Prerequisites&lt;/h2&gt;
 &lt;p&gt;There are several ways of accomplishing this. I personally used my Proxmox cluster split out over 6 different machines, all behind a private subnet with a firewall. You can do whatever as long as you meet the following requirements.&lt;/p&gt;
 
 &lt;ul&gt;
@@ -33,7 +69,7 @@
   &lt;li&gt;A free afternoon (Seriously, this could take a while)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;hello-bash-my-old-friend&quot;&gt;2. Hello bash my old friend&lt;/h2&gt;
+&lt;h2 id=&quot;2-hello-bash-my-old-friend&quot;&gt;2. Hello bash my old friend&lt;/h2&gt;
 &lt;p&gt;Go ahead and turn your machines on or provision your VMs. You can do one, or two, (or twenty, as I did). Make sure all of them are running CentOS 7. The minimum specs I got away with was 1 CPU, 512mb of RAM, and 1GB of hard drive space. If you are creating multiple “workers”, each one only needs 256mb of RAM. 512mb is only needed for the “master” node. Of course, if you intend on running bigger datasets than me, you will need to increase this number.&lt;/p&gt;
 
 &lt;p&gt;For each box you create, you will need to create a corresponding entry on your DNS server. How to do this is beyond the scope of this article and depends on what software you choose to use for this. I was able to just add the entries to my pfSense router using the configuration page. If your router can’t do this, take a look at a BIND server.&lt;/p&gt;
@@ -41,12 +77,12 @@
 &lt;p&gt;Now boot all of the boxes and run the following command.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;yum install openssh-server openssh-client openssl-devel -y
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;ssh-keygen -N &lt;span class=&quot;s1&quot;&gt;&#39;&#39;&lt;/span&gt; -f ~/.ssh/id_dsa
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;ssh-keygen -N &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt; -f ~/.ssh/id_dsa
 &lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;service sshd restart&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;This sets everything up for SSH connections between the master node and the workers.&lt;/p&gt;
 
-&lt;h2 id=&quot;installing-erlang-on-the-first-try-sometimes&quot;&gt;3. Installing Erlang on the first try (sometimes)&lt;/h2&gt;
+&lt;h2 id=&quot;3-installing-erlang-on-the-first-try-sometimes&quot;&gt;3. Installing Erlang on the first try (sometimes)&lt;/h2&gt;
 
 &lt;p&gt;Now we have to install Erlang. This is a pain to set up on CentOS for some reason. All the tutorials I found were either 5 years old or not for my distro. The solution I found was Kerl. Type the following commands into the terminals on all the machines.&lt;/p&gt;
 
@@ -66,7 +102,7 @@
 
 &lt;p&gt;If that works without any errors, you are now good to go. Now we can install Disco.&lt;/p&gt;
 
-&lt;h2 id=&quot;time-for-the-actual-installation&quot;&gt;4. Time for the (actual) installation&lt;/h2&gt;
+&lt;h2 id=&quot;4-time-for-the-actual-installation&quot;&gt;4. Time for the (actual) installation&lt;/h2&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git clone git://github.com/discoproject/disco.git
 &lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;disco&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -85,7 +121,7 @@
 &lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;python setup.py install --user
 &lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ..&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;h2 id=&quot;developing-trust-in-your-cluster-using-math-and-crypto-stuff&quot;&gt;5. Developing trust in your cluster (using math and crypto-stuff)&lt;/h2&gt;
+&lt;h2 id=&quot;5-developing-trust-in-your-cluster-using-math-and-crypto-stuff&quot;&gt;5. Developing trust in your cluster (using math and crypto-stuff)&lt;/h2&gt;
 
 &lt;p&gt;The last part is to set up the Erlang cookie and SSH keys. On the master server, run the disco service and stop it by running the following.&lt;/p&gt;
 
@@ -109,8 +145,8 @@
 &lt;p&gt;At this point, you should be able to follow the instructions in the documentation on &lt;a href=&quot;http://disco.readthedocs.io/en/develop/start/install.html#add-nodes-to-disco&quot;&gt;adding all of your nodes to the web GUI&lt;/a&gt; and running the &lt;a href=&quot;http://disco.readthedocs.io/en/develop/start/install.html#test-the-system&quot;&gt;test wordcount program&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Thu, 27 Apr 2017 13:00:00 -0400</pubDate>
-        <link>https://armmaster17.github.io/2017/04/27/getting-started-with-disco-mapreduce/</link>
-        <guid isPermaLink="true">https://armmaster17.github.io/2017/04/27/getting-started-with-disco-mapreduce/</guid>
+        <link>http://0.0.0.0:8080/2017/04/27/getting-started-with-disco-mapreduce/</link>
+        <guid isPermaLink="true">http://0.0.0.0:8080/2017/04/27/getting-started-with-disco-mapreduce/</guid>
         
         
         <category>disco</category>
@@ -124,8 +160,10 @@
         <description>&lt;p&gt;About seven years ago, author Jane McGonigal gave a TED talk, stressing a peculiar point that we need to be playing more video games.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;strong&gt;TODO: Rest of intro&lt;/strong&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;30 Billion hours is not enough to solve the world’s problems.
-- Jane McGonigal, 20xx, TedX&lt;sup id=&quot;fnref:1:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+  &lt;p&gt;30 Billion hours is not enough to solve the world’s problems.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Jane McGonigal, 20xx, TedX&lt;sup id=&quot;fnref:1:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+  &lt;/ul&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;For a long time, I was your typical gamer. I liked most of the popular video game titles out there such as Battlefield, Minecraft, Prison Architect, and everything in between. About two years ago, I stumbled across a game called Kerbal Space Program. It looked interesting enough, build a rocket, go to the moon, and try to not blow up. It seemed simple enough, but within my first hour of playing the game, that statement couldn’t be farther from the truth. Almost all of my first few missions ended up something &lt;a href=&quot;https://www.youtube.com/watch?v=UKUz5ZUPqM8&quot;&gt;like this&lt;/a&gt;.&lt;/p&gt;
@@ -172,17 +210,17 @@
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://www.ted.com/talks/jane_mcgonigal_gaming_can_make_a_better_world&quot;&gt;https://www.ted.com/talks/jane_mcgonigal_gaming_can_make_a_better_world&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:1:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;https://www.ted.com/talks/jane_mcgonigal_gaming_can_make_a_better_world&quot;&gt;https://www.ted.com/talks/jane_mcgonigal_gaming_can_make_a_better_world&lt;/a&gt;&amp;nbsp;&lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&amp;nbsp;&lt;a href=&quot;#fnref:1:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;http://www.npr.org/templates/story/story.php?storyId=128081896&quot;&gt;http://www.npr.org/templates/story/story.php?storyId=128081896&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;http://www.npr.org/templates/story/story.php?storyId=128081896&quot;&gt;http://www.npr.org/templates/story/story.php?storyId=128081896&lt;/a&gt;&amp;nbsp;&lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Thu, 27 Apr 2017 13:00:00 -0400</pubDate>
-        <link>https://armmaster17.github.io/2017/04/27/unnamed/</link>
-        <guid isPermaLink="true">https://armmaster17.github.io/2017/04/27/unnamed/</guid>
+        <link>http://0.0.0.0:8080/2017/04/27/unnamed/</link>
+        <guid isPermaLink="true">http://0.0.0.0:8080/2017/04/27/unnamed/</guid>
         
         
         <category>videogames</category>

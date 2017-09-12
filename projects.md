@@ -28,7 +28,7 @@ Artificial intelligence chat bot based on machine learning and markov chains.
 
 ---
 
-# Princeton Ridge Homeowners Association Official Website
+# Princeton Ridge Homeowners Association Official Website[^1]
 {% include icon.html username='PrincetonRidgeHA' icon='github' url='https://github.com/' %} /
 [HomeWeb](https://github.com/PrincetonRidgeHA/HomeWeb) - **Ruby/HTML/CSS/JS** - **Sinatra/Bootstrap/Angular**
 
@@ -44,7 +44,7 @@ Website for local neighborhood, powered by Sinatra on top of Ruby.
 
 ---
 
-# WULF Official Website
+# WULF Official Website[^1]
 {% include icon.html username='WULF-USA' icon='github' url='https://github.com/' %} /
 [Official-Website](https://github.com/WULF-USA/Official-Website) - **Ruby/HTML/CSS/Opal/JS** - **Sinatra/Bootstrap/React/Resque**
 
@@ -53,3 +53,7 @@ Project undertaken for local political activism group. Runs on Sinatra with back
 ---
 
 For the full list of projects I've worked on, see my GitHub portfolio: {% include icon.html username='ARMmaster17' icon='github' url='https://github.com/' %}
+
+---
+
+[^1]: Content creation for the indicated websites is maintained by 3rd-party individuals/organizations who's individual views may or may not represent my own.
