@@ -1,7 +1,7 @@
 # Site settings
 title: Joshua Zenn
 email: wordman05@gmail.com
-description: Technology, science, music, gaming, and sometimes crudely drawn art.
+description: Technology, science, music, gaming and sometimes crudely drawn art.
 baseurl: ""
 url: "https://armmaster17.github.io" # the base hostname & protocol for your site
 twitter_username: zennjos

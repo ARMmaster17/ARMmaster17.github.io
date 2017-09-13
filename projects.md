@@ -8,7 +8,7 @@ permalink: /projects/
 {% include icon.html username='ARMmaster17' icon='github' url='https://github.com/' %} /
 [AsmEmulator](https://github.com/ARMmaster17/AsmEmulator) - **C++**
 
-Simple Intel 80386 emulator implementing the entire x86 instruction set.
+Simple Intel 80386 emulator implementing the entire x86 instruction set. (Work in progress)
 
 ---
 
@@ -16,7 +16,7 @@ Simple Intel 80386 emulator implementing the entire x86 instruction set.
 {% include icon.html username='ARMmaster17' icon='github' url='https://github.com/' %} /
 [Cobra](https://github.com/ARMmaster17/Cobra) - **Ruby/HTML/CSS/JS** - **Sinatra/Bootstrap/AngularJS**
 
-Efficient parking solutions, powered by machine learning.
+Efficient parking solutions, powered by machine learning. (Work in progress)
 
 ---
 
@@ -56,4 +56,4 @@ For the full list of projects I've worked on, see my GitHub portfolio: {% includ
 
 ---
 
-[^1]: Content creation for the indicated websites is maintained by 3rd-party individuals/organizations who's individual views may or may not represent my own.
+[^1]: Content creation for the indicated website projects is maintained by 3rd-party individuals/organizations who's individual views may or may not represent my own.
