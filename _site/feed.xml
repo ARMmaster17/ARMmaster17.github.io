@@ -5,8 +5,8 @@
     <description>Technology, science, music, gaming and sometimes crudely drawn art.</description>
     <link>http://0.0.0.0:8080/</link>
     <atom:link href="http://0.0.0.0:8080/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 12 Sep 2017 21:59:26 -0400</pubDate>
-    <lastBuildDate>Tue, 12 Sep 2017 21:59:26 -0400</lastBuildDate>
+    <pubDate>Sat, 23 Sep 2017 11:04:54 -0400</pubDate>
+    <lastBuildDate>Sat, 23 Sep 2017 11:04:54 -0400</lastBuildDate>
     <generator>Jekyll v3.5.1</generator>
     
       <item>
@@ -25,14 +25,14 @@ breaking it to a point where I couldn’t fix it). Take a look at the following 
 
 &lt;p&gt;Now if you are a seasoned programmer (particularly if you know Ruby), asking you to interpret this code block would be an insult to your abilities. Jeff Atwood, Co-founder of StackOverflow, wrote about
  several recruiters experiences turning down staggering amounts of job canidates for software development positions because they couldn’t pass the technical portion of the interview.&lt;sup id=&quot;fnref:wcpp&quot;&gt;&lt;a href=&quot;#fn:wcpp&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; The 
- interesting part is that they didn’t forget what binary search is, or struggled to solve a brainteaser about manhole covers.&lt;sup id=&quot;fnref:gic&quot;&gt;&lt;a href=&quot;#fn:gic&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; They couldn’t solve basic programming problems. Some graduate students took
- upwards of 15 minutes to write the block of code displayed above.&lt;sup id=&quot;fnref:htgh&quot;&gt;&lt;a href=&quot;#fn:htgh&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; Now of course there are variables that can affect this like interview nervousness, the specific language being used, and possibly 
+ interesting part is that they didn’t forget what binary search is, or &lt;a href=&quot;http://www.businessinsider.com/15-google-interview-questions-that-used-to-make-geniuses-feel-dumb-2012-11&quot;&gt;struggled to solve a brainteaser about manhole covers&lt;/a&gt;. They couldn’t solve basic programming problems. &lt;a href=&quot;http://www.kegel.com/academy/getting-hired.html&quot;&gt;Some graduate students took
+ upwards of 15 minutes to write the block of code displayed above&lt;/a&gt;. Now of course there are variables that can affect this like interview nervousness, the specific language being used, and possibly 
  the interviewee overthinking it. According to the article though, this has happened in interviews enough times to show that lack of logical understanding of what a given piece of code does it absolutely
  a factor here.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Problems in IT&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If you’ve ever taken a look at the stories featured on &lt;a href=&quot;https://reddit.com/r/talesfromtechsupport/top?t=all&quot;&gt;/r/talesfromtechsupport&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Underlying problem&lt;/strong&gt; Dunning-Kruger effect&lt;sup id=&quot;fnref:dkef&quot;&gt;&lt;a href=&quot;#fn:dkef&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Underlying problem&lt;/strong&gt; Dunning-Kruger effect&lt;sup id=&quot;fnref:dkef&quot;&gt;&lt;a href=&quot;#fn:dkef&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;why this matters&lt;/strong&gt;&lt;/p&gt;
 
@@ -41,8 +41,8 @@ The good news is that metacognition, the problem-solving ability behind Digging,
 abilities, but ultimately anyone can build this ability much like a muscle. The more you use it, the stronger it gets. &lt;strong&gt;TODO: Continue&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;TODO: Give kids a platform to break stuff.&lt;/strong&gt; If you have a computer that your kids use, install VirtualBox and make regular backups. Give them the admin password (to the guest OS) and let them break stuff. When something 
-goes wrong, like when they discover the importance of the System32 directory&lt;sup id=&quot;fnref:kymds&quot;&gt;&lt;a href=&quot;#fn:kymds&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;, just do a restore from backup. Takes up to 60 seconds to do a restore, and you can even write a script to automatically 
-do the backups. If you’re paranoid about a ransomware breaking out of the isolated VM&lt;sup id=&quot;fnref:mvmd&quot;&gt;&lt;a href=&quot;#fn:mvmd&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;, grab yourself an old computer from the dumpster and slap &lt;a href=&quot;https://www.proxmox.com/&quot;&gt;Proxmox&lt;/a&gt; or &lt;a href=&quot;https://xenserver.org/&quot;&gt;Citrix XenServer&lt;/a&gt; on it. Both are pretty hard to screw up 
+goes wrong, like when they discover &lt;a href=&quot;http://knowyourmeme.com/memes/delete-system32&quot;&gt;the importance of the System32 directory&lt;/a&gt;, just do a restore from backup. Takes up to 60 seconds to do a restore, and you can even write a script to automatically 
+do the backups. &lt;a href=&quot;https://blog.malwarebytes.com/threat-analysis/2014/02/a-look-at-malware-with-virtual-machine-detection/&quot;&gt;If you’re paranoid about a ransomware breaking out of the isolated VM&lt;/a&gt;, grab yourself an old computer from the dumpster and slap &lt;a href=&quot;https://www.proxmox.com/&quot;&gt;Proxmox&lt;/a&gt; or &lt;a href=&quot;https://xenserver.org/&quot;&gt;Citrix XenServer&lt;/a&gt; on it. Both are pretty hard to screw up 
 if you find an online guide as long as you aren’t doing anything crazy.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;TODO: YOUR responsibility&lt;/strong&gt;&lt;/p&gt;
@@ -56,20 +56,8 @@ if you find an online guide as long as you aren’t doing anything crazy.&lt;/p&
     &lt;li id=&quot;fn:wcpp&quot;&gt;
       &lt;p&gt;&lt;a href=&quot;https://blog.codinghorror.com/why-cant-programmers-program/&quot;&gt;https://blog.codinghorror.com/why-cant-programmers-program/&lt;/a&gt;&amp;nbsp;&lt;a href=&quot;#fnref:wcpp&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
-    &lt;li id=&quot;fn:gic&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;http://www.businessinsider.com/15-google-interview-questions-that-used-to-make-geniuses-feel-dumb-2012-11&quot;&gt;http://www.businessinsider.com/15-google-interview-questions-that-used-to-make-geniuses-feel-dumb-2012-11&lt;/a&gt;&amp;nbsp;&lt;a href=&quot;#fnref:gic&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:htgh&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;http://www.kegel.com/academy/getting-hired.html&quot;&gt;http://www.kegel.com/academy/getting-hired.html&lt;/a&gt;&amp;nbsp;&lt;a href=&quot;#fnref:htgh&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
     &lt;li id=&quot;fn:dkef&quot;&gt;
       &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect&quot;&gt;https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect&lt;/a&gt;&amp;nbsp;&lt;a href=&quot;#fnref:dkef&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:kymds&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;http://knowyourmeme.com/memes/delete-system32&quot;&gt;http://knowyourmeme.com/memes/delete-system32&lt;/a&gt;&amp;nbsp;&lt;a href=&quot;#fnref:kymds&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:mvmd&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://blog.malwarebytes.com/threat-analysis/2014/02/a-look-at-malware-with-virtual-machine-detection/&quot;&gt;https://blog.malwarebytes.com/threat-analysis/2014/02/a-look-at-malware-with-virtual-machine-detection/&lt;/a&gt;&amp;nbsp;&lt;a href=&quot;#fnref:mvmd&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
@@ -118,9 +106,12 @@ if you find an online guide as long as you aren’t doing anything crazy.&lt;/p&
 
 &lt;p&gt;Now boot all of the boxes and run the following command.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;yum install openssh-server openssh-client openssl-devel -y
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;yum install openssh-server openssh-client openssl-devel -y
 &lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;ssh-keygen -N &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt; -f ~/.ssh/id_dsa
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;service sshd restart&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;service sshd restart&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;This sets everything up for SSH connections between the master node and the workers.&lt;/p&gt;
 
@@ -128,61 +119,85 @@ if you find an online guide as long as you aren’t doing anything crazy.&lt;/p&
 
 &lt;p&gt;Now we have to install Erlang. This is a pain to set up on CentOS for some reason. All the tutorials I found were either 5 years old or not for my distro. The solution I found was Kerl. Type the following commands into the terminals on all the machines.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;curl -O https://raw.githubusercontent.com/kerl/kerl/master/kerl
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;chmod a+x kerl&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;curl -O https://raw.githubusercontent.com/kerl/kerl/master/kerl
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;chmod a+x kerl&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;This gets Kerl all set up so we can install Erlang. Before we clone and build Erlang though, we need to install some additional dependencies.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;yum install tar gcc make perl ncurses-devel git -y&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;yum install tar gcc make perl ncurses-devel git -y&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now we can install Kerl. Run the following commands.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;./kerl build 17.5 17.5
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;./kerl build 17.5 17.5
 &lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;./kerl install 17.5 erlang/17_5/
 &lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;. /root/erlang/17_5/activate
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;erl -version&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;erl -version&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;If that works without any errors, you are now good to go. Now we can install Disco.&lt;/p&gt;
 
 &lt;h2 id=&quot;4-time-for-the-actual-installation&quot;&gt;4. Time for the (actual) installation&lt;/h2&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git clone git://github.com/discoproject/disco.git
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;disco&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git clone git://github.com/discoproject/disco.git
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;disco&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;At this point, what you need to do next depends on the type of installation you are performing. If you are installing the master node (or doing a single-machine install), run this:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;make install&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;make install&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Otherwise, if you are creating a worker node that doesn’t need the web GUI, run this instead:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;make install-node&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;make install-node&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now, on both the master and worker nodes, set up the python libraries.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;lib
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;lib
 &lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;python setup.py install --user
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ..&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ..&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h2 id=&quot;5-developing-trust-in-your-cluster-using-math-and-crypto-stuff&quot;&gt;5. Developing trust in your cluster (using math and crypto-stuff)&lt;/h2&gt;
 
 &lt;p&gt;The last part is to set up the Erlang cookie and SSH keys. On the master server, run the disco service and stop it by running the following.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;bin/disco start
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;bin/disco start
 // Wait a few seconds...
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;bin/disco stop&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;bin/disco stop&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now run the following on your master node. Replace NODE with the DNS-resolvable name of each of your worker boxes.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;ssh-copy-id localhost
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;ssh-copy-id localhost
 &lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;scp ~/.erlang.cookie localhost:
 // Now run these two commands &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;every worker box you have,
 // replacing NODE with the DNS resolvable name.
 &lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;ssh-copy-id NODE
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;scp ~/.erlang.cookie NODE:&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;scp ~/.erlang.cookie NODE:&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Finally, run the following on all the nodes:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;bin/disco nodaemon&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;bin/disco nodaemon&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;At this point, you should be able to follow the instructions in the documentation on &lt;a href=&quot;http://disco.readthedocs.io/en/develop/start/install.html#add-nodes-to-disco&quot;&gt;adding all of your nodes to the web GUI&lt;/a&gt; and running the &lt;a href=&quot;http://disco.readthedocs.io/en/develop/start/install.html#test-the-system&quot;&gt;test wordcount program&lt;/a&gt;.&lt;/p&gt;
 </description>

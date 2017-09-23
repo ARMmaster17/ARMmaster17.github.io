@@ -31,7 +31,7 @@ For each box you create, you will need to create a corresponding entry on your D
 
 Now boot all of the boxes and run the following command.
 
-{% highlight bash %}
+{% highlight bash linenos %}
 $ yum install openssh-server openssh-client openssl-devel -y
 $ ssh-keygen -N '' -f ~/.ssh/id_dsa
 $ service sshd restart
@@ -43,20 +43,20 @@ This sets everything up for SSH connections between the master node and the work
 
 Now we have to install Erlang. This is a pain to set up on CentOS for some reason. All the tutorials I found were either 5 years old or not for my distro. The solution I found was Kerl. Type the following commands into the terminals on all the machines.
 
-{% highlight bash %}
+{% highlight bash linenos %}
 $ curl -O https://raw.githubusercontent.com/kerl/kerl/master/kerl
 $ chmod a+x kerl
 {% endhighlight %}
 
 This gets Kerl all set up so we can install Erlang. Before we clone and build Erlang though, we need to install some additional dependencies.
 
-{% highlight bash %}
+{% highlight bash linenos %}
 $ yum install tar gcc make perl ncurses-devel git -y
 {% endhighlight %}
 
 Now we can install Kerl. Run the following commands.
 
-{% highlight bash %}
+{% highlight bash linenos %}
 $ ./kerl build 17.5 17.5
 $ ./kerl install 17.5 erlang/17_5/
 $ . /root/erlang/17_5/activate
@@ -67,26 +67,26 @@ If that works without any errors, you are now good to go. Now we can install Dis
 
 ## 4. Time for the (actual) installation
 
-{% highlight bash %}
+{% highlight bash linenos %}
 $ git clone git://github.com/discoproject/disco.git
 $ cd disco
 {% endhighlight %}
 
 At this point, what you need to do next depends on the type of installation you are performing. If you are installing the master node (or doing a single-machine install), run this:
 
-{% highlight bash %}
+{% highlight bash linenos %}
 $ make install
 {% endhighlight %}
 
 Otherwise, if you are creating a worker node that doesn't need the web GUI, run this instead:
 
-{% highlight bash %}
+{% highlight bash linenos %}
 $ make install-node
 {% endhighlight %}
 
 Now, on both the master and worker nodes, set up the python libraries.
 
-{% highlight bash %}
+{% highlight bash linenos %}
 $ cd lib
 $ python setup.py install --user
 $ cd ..
@@ -96,7 +96,7 @@ $ cd ..
 
 The last part is to set up the Erlang cookie and SSH keys. On the master server, run the disco service and stop it by running the following.
 
-{% highlight bash %}
+{% highlight bash linenos %}
 $ bin/disco start
 // Wait a few seconds...
 $ bin/disco stop
@@ -104,7 +104,7 @@ $ bin/disco stop
 
 Now run the following on your master node. Replace NODE with the DNS-resolvable name of each of your worker boxes.
 
-{% highlight bash %}
+{% highlight bash linenos %}
 $ ssh-copy-id localhost
 $ scp ~/.erlang.cookie localhost:
 // Now run these two commands for every worker box you have,
@@ -115,7 +115,7 @@ $ scp ~/.erlang.cookie NODE:
 
 Finally, run the following on all the nodes:
 
-{% highlight bash %}
+{% highlight bash linenos %}
 $ bin/disco nodaemon
 {% endhighlight %}
 

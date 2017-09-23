@@ -113,9 +113,12 @@
 
 <p>Now boot all of the boxes and run the following command.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>yum install openssh-server openssh-client openssl-devel -y
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3</pre></td><td class="code"><pre><span class="gp">$ </span>yum install openssh-server openssh-client openssl-devel -y
 <span class="gp">$ </span>ssh-keygen -N <span class="s1">''</span> -f ~/.ssh/id_dsa
-<span class="gp">$ </span>service sshd restart</code></pre></figure>
+<span class="gp">$ </span>service sshd restart<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p>This sets everything up for SSH connections between the master node and the workers.</p>
 
@@ -123,61 +126,85 @@
 
 <p>Now we have to install Erlang. This is a pain to set up on CentOS for some reason. All the tutorials I found were either 5 years old or not for my distro. The solution I found was Kerl. Type the following commands into the terminals on all the machines.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>curl -O https://raw.githubusercontent.com/kerl/kerl/master/kerl
-<span class="gp">$ </span>chmod a+x kerl</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="gp">$ </span>curl -O https://raw.githubusercontent.com/kerl/kerl/master/kerl
+<span class="gp">$ </span>chmod a+x kerl<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p>This gets Kerl all set up so we can install Erlang. Before we clone and build Erlang though, we need to install some additional dependencies.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>yum install tar gcc make perl ncurses-devel git -y</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="gp">$ </span>yum install tar gcc make perl ncurses-devel git -y<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p>Now we can install Kerl. Run the following commands.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>./kerl build 17.5 17.5
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4</pre></td><td class="code"><pre><span class="gp">$ </span>./kerl build 17.5 17.5
 <span class="gp">$ </span>./kerl install 17.5 erlang/17_5/
 <span class="gp">$ </span>. /root/erlang/17_5/activate
-<span class="gp">$ </span>erl -version</code></pre></figure>
+<span class="gp">$ </span>erl -version<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p>If that works without any errors, you are now good to go. Now we can install Disco.</p>
 
 <h2 id="4-time-for-the-actual-installation">4. Time for the (actual) installation</h2>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>git clone git://github.com/discoproject/disco.git
-<span class="gp">$ </span><span class="nb">cd </span>disco</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="gp">$ </span>git clone git://github.com/discoproject/disco.git
+<span class="gp">$ </span><span class="nb">cd </span>disco<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p>At this point, what you need to do next depends on the type of installation you are performing. If you are installing the master node (or doing a single-machine install), run this:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>make install</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="gp">$ </span>make install<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p>Otherwise, if you are creating a worker node that doesn’t need the web GUI, run this instead:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>make install-node</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="gp">$ </span>make install-node<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p>Now, on both the master and worker nodes, set up the python libraries.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span><span class="nb">cd </span>lib
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3</pre></td><td class="code"><pre><span class="gp">$ </span><span class="nb">cd </span>lib
 <span class="gp">$ </span>python setup.py install --user
-<span class="gp">$ </span><span class="nb">cd</span> ..</code></pre></figure>
+<span class="gp">$ </span><span class="nb">cd</span> ..<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <h2 id="5-developing-trust-in-your-cluster-using-math-and-crypto-stuff">5. Developing trust in your cluster (using math and crypto-stuff)</h2>
 
 <p>The last part is to set up the Erlang cookie and SSH keys. On the master server, run the disco service and stop it by running the following.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>bin/disco start
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3</pre></td><td class="code"><pre><span class="gp">$ </span>bin/disco start
 // Wait a few seconds...
-<span class="gp">$ </span>bin/disco stop</code></pre></figure>
+<span class="gp">$ </span>bin/disco stop<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p>Now run the following on your master node. Replace NODE with the DNS-resolvable name of each of your worker boxes.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>ssh-copy-id localhost
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6</pre></td><td class="code"><pre><span class="gp">$ </span>ssh-copy-id localhost
 <span class="gp">$ </span>scp ~/.erlang.cookie localhost:
 // Now run these two commands <span class="k">for </span>every worker box you have,
 // replacing NODE with the DNS resolvable name.
 <span class="gp">$ </span>ssh-copy-id NODE
-<span class="gp">$ </span>scp ~/.erlang.cookie NODE:</code></pre></figure>
+<span class="gp">$ </span>scp ~/.erlang.cookie NODE:<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p>Finally, run the following on all the nodes:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>bin/disco nodaemon</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="gp">$ </span>bin/disco nodaemon<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p>At this point, you should be able to follow the instructions in the documentation on <a href="http://disco.readthedocs.io/en/develop/start/install.html#add-nodes-to-disco">adding all of your nodes to the web GUI</a> and running the <a href="http://disco.readthedocs.io/en/develop/start/install.html#test-the-system">test wordcount program</a>.</p>
 
