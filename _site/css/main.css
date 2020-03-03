@@ -262,7 +262,7 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 body { font: 100% Helvetica, sans-serif; background-image: url("/img/background.jpg"); background-position: center; background-repeat: no-repeat; background-attachment: fixed; }
 
-.ins-wrapper, .site-header, .site-footer { background-color: #FFE; }
+.ins-wrapper, .site-header, .site-footer { background-color: #FFE; opacity: 0.9; }
 
 .ins-wrapper { padding-top: 20px; padding-bottom: 10px; }
 
