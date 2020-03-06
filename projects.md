@@ -4,22 +4,6 @@ title: Projects
 permalink: /projects/
 ---
 
-# AsmEmulator
-{% include icon.html username='ARMmaster17' icon='github' url='https://github.com/' %} /
-[AsmEmulator](https://github.com/ARMmaster17/AsmEmulator) - **C++**
-
-Simple Intel 80386 emulator implementing the entire x86 instruction set. (Work in progress)
-
----
-
-# Cobra
-{% include icon.html username='ARMmaster17' icon='github' url='https://github.com/' %} /
-[Cobra](https://github.com/ARMmaster17/Cobra) - **Ruby/HTML/CSS/JS** - **Sinatra/Bootstrap/AngularJS**
-
-Efficient parking solutions, powered by machine learning. (Work in progress)
-
----
-
 # JeffBot (v1-2)
 {% include icon.html username='ARMmaster17' icon='github' url='https://github.com/' %} /
 [JeffBot](https://github.com/ARMmaster17/JeffBot) - **C#/Ruby/HTML/CSS/JS** - **MVC 5/Sinatra/Bootstrap**
