@@ -4,4 +4,6 @@ title: Hire
 permalink: /hire/
 ---
 
-I am not available for freelance and/or contract work at the moment. This page will be updated in the near future.
+I am currently seeking a summer internship and/or part-time work in the CS or IT industry.
+
+Please see my [LinkedIn profile](https://linkedin.com/in/jzenn) for more information.
