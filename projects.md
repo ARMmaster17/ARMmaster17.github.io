@@ -4,6 +4,23 @@ title: Projects
 permalink: /projects/
 ---
 
+# Firecore Lab
+Personal Server Cluster - **Proxmox/VMWare ESXi/RancherOS**
+
+Started in 2011 with a pile of decomissioned computers, the Firecore Project is a collection of repurposed consumer-grade computers running modern virtualization and container solutions. The project serves no commercial purpose, but provides a sandbox for me to learn about emerging technologies with my own equipment (versus my company's multi-million dollar datacenter). Current solutions and services include:
+- HTTP load-balancing with Nginx.
+- BIND DNS with <1 ms response time.
+- IPsec VPN between all Proxmox servers.
+- OpenVPN for roadwarrior access.
+- MariaDB(MySQL)/MongoDB database hosting.
+- Containerized Apache Spark cluster with Jupyter notebook hosting.
+- LDAP central authentication.
+- Container hosting with LXC/Docker.
+
+Web documentation coming soon.
+
+---
+
 # JeffBot (v1-2)
 {% include icon.html username='ARMmaster17' icon='github' url='https://github.com/' %} /
 [JeffBot](https://github.com/ARMmaster17/JeffBot) - **C#/Ruby/HTML/CSS/JS** - **MVC 5/Sinatra/Bootstrap**
