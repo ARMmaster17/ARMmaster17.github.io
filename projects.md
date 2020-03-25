@@ -61,7 +61,7 @@ Project undertaken for local political activism group. Runs on Sinatra with back
 ---
 
 # All Stuff Nerdy
-{% include icon.html icon='google' url='https://blogspot.com/' %} [Blog](allstuffnerdy.blogspot.com) / **Blogspot**
+{% include icon.html icon='google' url='https://blogspot.com/' %} [Blog](https://allstuffnerdy.blogspot.com) / **Blogspot**
 
 Produced medium-length aritcles about technology topics as a freelance writer. Some articles were posted on this site.
 
