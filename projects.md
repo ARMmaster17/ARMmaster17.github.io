@@ -23,6 +23,7 @@ Started in 2011 with a pile of decomissioned computers, the Firecore Project is 
 - Containerized Apache Spark cluster with Jupyter notebook hosting.
 - LDAP central authentication.
 - Container hosting with LXC/Docker.
+- IMAP email service based on Postfix and Dovecot.
 
 Web documentation coming soon.
 
