@@ -25,7 +25,7 @@ Started in 2011 with a pile of decomissioned computers, the Firecore Project is 
 - Container hosting with LXC/Docker.
 - IMAP email service based on Postfix and Dovecot.
 
-Web documentation coming soon.
+Internet-facing status panel coming soon.
 
 ---
 
