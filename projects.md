@@ -24,6 +24,8 @@ Started in 2011 with a pile of decomissioned computers, the Firecore Project is 
 - LDAP central authentication.
 - Container hosting with LXC/Docker.
 - IMAP email service based on Postfix and Dovecot.
+- On-demand game server containers (deploy time <10 seconds).
+- SAN for backups/high-availability VMs.
 
 Internet-facing status panel coming soon.
 
