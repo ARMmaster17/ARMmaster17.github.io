@@ -26,6 +26,7 @@ Started in 2011 with a pile of decomissioned computers, the Firecore Project is 
 - IMAP email service based on Postfix and Dovecot.
 - On-demand game server containers (deploy time <10 seconds).
 - SAN for backups/high-availability VMs.
+- APT package caching/proxy for Ubuntu and Debian VMs/containers.
 
 Internet-facing status panel coming soon.
 
