@@ -21,7 +21,7 @@ Started in 2011 with a pile of decomissioned computers, the Firecore Project is 
 - OpenVPN for roadwarrior access.
 - MariaDB(MySQL)/MongoDB database hosting.
 - Containerized Apache Spark cluster with Jupyter notebook hosting.
-- LDAP central authentication.
+- Active Directory central authentication with Federated SSO.
 - Container hosting with LXC/Docker.
 - IMAP email service based on Postfix and Dovecot.
 - On-demand game server containers (deploy time <10 seconds).
