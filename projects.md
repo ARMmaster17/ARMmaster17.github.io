@@ -36,7 +36,7 @@ Internet-facing status panel coming soon.
 {% include icon.html username='ARMmaster17' icon='github' url='https://github.com/' %} /
 [JeffBot](https://github.com/ARMmaster17/JeffBot) - <img src="/img/ruby.png" height="20" /> **Sinatra Ruby** | <img src="/img/bootstrap.png" height="20" /> **Bootstrap**
 
-Artificial intelligence chat bot based on machine learning and markov chains.
+Artificial intelligence chat bot based on machine learning and markov chains. Version 2 was made later that utilized ASP.NET and C#.
 
 ---
 
