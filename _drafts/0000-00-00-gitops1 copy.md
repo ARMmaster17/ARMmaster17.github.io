@@ -6,9 +6,7 @@ categories: gitops devops cd ci flux github kubernetes docker
 ---
 
 ## Overview
-[Kubernetes + Docker intro]
-
-When I first learned about GitOps, I really wanted to try it out on my homelab. I initially went with Argo CD, simply because that's what everyone else was using. Although Argo CD is cool and all, there was one major deal-breaker for me. Argo CD requires nearly 8GB of RAM for normal operation, which was more than double the amount of RAM in my test k3s cluster. The solution I found was [Flux CD](https://github.com/fluxcd/flux). It's very lightweight, and all of it's configuration is stored in your source control, so no need to mess with any fancy PV setups in k8s.
+When I first learned about GitOps, I really wanted to try it out on my homelab. I initially went with [Argo CD](https://argoproj.github.io/cd/), simply because that's what everyone else was using. Although Argo CD is cool and all, there was one major deal-breaker for me. Argo CD requires nearly 8GB of RAM for normal operation and a lot of CPU power, which was more than double the amount of RAM in my test k3s cluster. As a broke college student I figured there had to be a better (and cheaper) way. The solution I found was [Flux CD](https://github.com/fluxcd/flux). It's very lightweight, and all of it's configuration is stored in your source control, so no need to mess with any fancy PV setups in k8s.
 
 Flux works on top of any existing k3s or k8s cluster. I'll be using k3s for this tutorial. You'll need about 256MB of RAM and a few milli-CPU available in your cluster. One important thing that I found is that the Flux documentation is a little confusing at times, and I often had to delete the Flux deployment and re-deploy to implement the change. This guide will attempt to get it right the first time (assuming your needs are the same as mine).
 
